@@ -13,7 +13,6 @@
         </div>
         <% end %>
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-      <% if  user_signed_in? && current_user == @prototype.user%>
       <div class="prototype__image">
         <%= image_tag @prototype.image %>
       </div>
@@ -31,7 +30,7 @@
           </p>
         </div>
       </div>
-      <% end %>
+ 
       <div class="prototype__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
